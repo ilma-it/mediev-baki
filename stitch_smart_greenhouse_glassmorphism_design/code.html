@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="ru"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary":"#4edea3","on-tertiary":"#003829","error-container":"#93000a","error":"#ffb4ab","surface-container":"#171f33","on-tertiary-container":"#004231","on-secondary-fixed":"#002114","primary-fixed-dim":"#4edea3","on-primary-container":"#00422b","on-surface-variant":"#bbcabf","surface-tint":"#4edea3","tertiary-fixed-dim":"#95d3ba","surface-container-lowest":"#060e20","inverse-primary":"#006c49","on-surface":"#dae2fd","on-tertiary-fixed":"#002117","inverse-surface":"#dae2fd","outline":"#86948a","on-background":"#dae2fd","background":"#0b1326","tertiary-container":"#71af97","surface-container-high":"#222a3d","secondary-fixed-dim":"#45dfa4","on-primary":"#003824","surface-container-low":"#131b2e","surface-bright":"#31394d","on-primary-fixed-variant":"#005236","primary-container":"#10b981","on-secondary-container":"#00452e","on-secondary-fixed-variant":"#005137","on-tertiary-fixed-variant":"#0b513d","tertiary-fixed":"#b0f0d6","secondary":"#45dfa4","on-error":"#690005","tertiary":"#95d3ba","secondary-fixed":"#68fcbf","primary-fixed":"#6ffbbe","surface-variant":"#2d3449","on-primary-fixed":"#002113","inverse-on-surface":"#283044","surface-container-highest":"#2d3449","on-error-container":"#ffdad6","on-secondary":"#003825","outline-variant":"#3c4a42","surface":"#0b1326","secondary-container":"#00bd85","surface-dim":"#0b1326"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"2.25rem","space-sm":"0.5rem","margin-lg":"3rem","gutter-lg":"1.5rem","gutter":"1.25rem","margin":"1rem","margin-md":"2rem","space-lg":"1.5rem","space-md":"1rem","space-xs":"0.25rem"},"fontFamily":{"body-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"label-numeric-lg":["Inter"],"display":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-sm":["Inter"],"display-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"label-numeric-lg":["28px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"500"}],"display":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"display-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- 1. HEADER -->
+<header class="fixed top-0 inset-x-0 z-50 py-space-sm"><div class="max-w-7xl mx-auto px-gutter"><div class="h-16 px-space-lg bg-surface-container-low/80 backdrop-blur-2xl rounded-full border border-emerald-500/20 shadow-[0_8px_32px_rgba(0,0,0,0.4)] flex items-center justify-between"><a class="flex items-center gap-space-sm group focus:outline-none" href="#"><span class="w-2.5 h-2.5 rounded-full bg-primary shadow-[0_0_12px_#4edea3] transition-transform duration-300 group-hover:scale-125"></span><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">FloraSense</span></a><nav class="hidden lg:flex items-center gap-space-xs p-1 rounded-full bg-surface-container-lowest/60 backdrop-blur-md border border-white/5"><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#video">Видеообзор</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#cad">SketchUp CAD</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#renders">3D Рендеры</a><a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#model-3d">Интерактивная 3D Модель</a></nav><div class="flex items-center gap-space-sm sm:gap-space-md"><div class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-primary text-xs font-mono"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>24/7 Autopilot</div><a class="inline-flex items-center justify-center px-space-md sm:px-space-lg py-2 rounded-full bg-primary text-on-primary font-title-md text-xs sm:text-title-md shadow-[0_0_18px_rgba(78,222,163,0.35)] hover:shadow-[0_0_28px_rgba(78,222,163,0.6)] hover:scale-[1.02] active:scale-[0.98] transition-all" href="#contact">Связаться</a></div></div></div></header>
+<main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full relative">
+<!-- Ambient Atmospheric Backdrops -->
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+<div class="absolute -top-32 left-1/4 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[150px]"></div>
+<div class="absolute top-[35%] -right-40 w-[700px] h-[700px] rounded-full bg-secondary-container/10 blur-[160px]"></div>
+<div class="absolute bottom-20 left-10 w-[550px] h-[550px] rounded-full bg-cyan-500/10 blur-[150px]"></div>
+</div>
+<!-- 2. HERO SECTION -->
+<section class="relative w-full min-h-[90vh] flex items-center justify-center -mt-16 pt-24 px-gutter overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="FloraSense Automated Glasshouse Architecture" class="w-full h-full object-cover object-center filter brightness-[0.68] contrast-[1.08] scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1X0WXHz3mplkFxgZ6-SOIOxTMQdKc3n9Lx2mal8Ri9sEkkkj1NYvlSCkyKrmYnZ4fYLcMaw_Jf9Zts6XaNwQFcWZ7LOL1joOOlqCrLEjJOmguIEN4bZ3hpmik_FC3KPMPwFj7vV-RzQMnrzxLXCczTg42K5Q-VZYY6i1LZrV7WFIP4ql7-rDsPzCdflgXCRTtuxVwM5ACjCmm_8crJWsB2W23iIt1oYqdgnj95Mm4rC"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/60 to-surface/75"></div>
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(11,19,38,0.85)_100%)]"></div>
+</div>
+<div class="relative z-10 max-w-6xl mx-auto w-full flex flex-col items-center text-center">
+<!-- Status Pill -->
+<div class="inline-flex items-center gap-space-sm px-space-md py-space-xs rounded-full bg-surface-container-lowest/70 backdrop-blur-2xl border border-emerald-500/20 shadow-xl mb-space-lg">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-widest">Smart Biosphere • 24/7 Autopilot</span>
+</div>
+<!-- Hero Title -->
+<h1 class="font-display text-display md:text-[68px] md:leading-[1.1] font-bold text-on-surface tracking-tight max-w-4xl">
+        FloraSense
+      </h1>
+<p class="mt-space-md font-headline-md text-headline-md text-on-surface-variant max-w-2xl font-light">
+        Интеллектуальная биосистема закрытого грунта
+      </p>
+<!-- Glass Telemetry Pill Matrix -->
+<div class="mt-space-xl grid grid-cols-1 sm:grid-cols-3 gap-space-md w-full max-w-3xl">
+<div class="p-space-md rounded-2xl bg-surface-container-lowest/60 backdrop-blur-xl border border-white/5 shadow-lg flex flex-col items-center group hover:border-emerald-500/30 transition-all duration-300">
+<span class="font-label-numeric-lg text-label-numeric-lg text-primary font-medium">99.4%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1 tracking-wider">Точность климата</span>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-lowest/60 backdrop-blur-xl border border-white/5 shadow-lg flex flex-col items-center group hover:border-emerald-500/30 transition-all duration-300">
+<span class="font-label-numeric-lg text-label-numeric-lg text-secondary font-medium">0.88</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1 tracking-wider">Индекс биомассы NDVI</span>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-lowest/60 backdrop-blur-xl border border-white/5 shadow-lg flex flex-col items-center group hover:border-emerald-500/30 transition-all duration-300">
+<span class="font-label-numeric-lg text-label-numeric-lg text-primary-fixed font-medium">-40%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1 tracking-wider">Расход ресурсов</span>
+</div>
+</div>
+<!-- Action Button -->
+<div class="mt-space-xl flex flex-wrap items-center justify-center gap-space-md">
+<a class="px-space-lg py-space-sm rounded-full bg-primary text-on-primary font-title-md text-title-md shadow-[0_0_24px_rgba(78,222,163,0.35)] hover:shadow-[0_0_36px_rgba(78,222,163,0.6)] hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2" href="#video">
+<span>Смотреть видеообзор</span>
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+</a>
+<a class="px-space-lg py-space-sm rounded-full bg-surface-container-high/60 border border-white/10 text-on-surface font-title-md text-title-md hover:bg-surface-bright transition-all flex items-center gap-2" href="#model-3d">
+<span>3D Интерактив</span>
+<span class="material-symbols-outlined text-[18px]">view_in_ar</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 3. SECTION 1: ВИДЕООБЗОР УМНОЙ ТЕПЛИЦЫ -->
+<section class="relative z-10 max-w-6xl mx-auto px-gutter py-space-xl w-full" id="video">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+<div>
+<div class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-space-xs">Потоковая визуализация</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Видеообзор умной теплицы</h2>
+</div>
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-primary text-xs font-mono">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+4K 60FPS AgTech Live Feed
+</div>
+</div>
+<!-- Cinematic Glassmorphic Video Mockup Player -->
+<div class="relative w-full rounded-3xl overflow-hidden bg-slate-950 border border-emerald-500/25 shadow-[0_20px_50px_rgba(0,0,0,0.6)] group">
+<!-- Video Stream Preview -->
+<div class="relative aspect-video w-full overflow-hidden bg-slate-950">
+<img alt="Видеопоток умной теплицы" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]" id="video-preview-img" src="https://lh3.googleusercontent.com/aida/AEtjO1V6eXK0EyaVQIT81cAYylTtaNtVAOx6JzPoUcEYNJYsTBuQ5gcWQhWbTimgthpLQSVfdEss5mtX_T37D0rZhJ7zauLfvI1QuL3KaVoQPTK7Crr22tgpHUrQ6MVF5lx3Ww-WjV-d7Zpx9rtRiLStd5p2kQlWuR5h8BcyHWliF0zV6-mVIgg2gfICl8h3Q89jzrfDPuDUyyZ--8c5MujRLZc_ceB8FwtQPXXAtdDpXLif"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-slate-950/40"></div>
+<!-- Top Overlay Bar: Camera Switcher -->
+<div class="absolute top-4 inset-x-4 flex flex-wrap items-center justify-between gap-2 z-20">
+<div class="flex items-center gap-1.5 p-1 rounded-full bg-black/60 backdrop-blur-md border border-white/10" id="camera-switcher">
+<button class="cam-btn active px-3 py-1 rounded-full text-xs font-mono font-medium transition-all bg-primary text-on-primary shadow-sm" data-cam="1" data-img="https://lh3.googleusercontent.com/aida/AEtjO1X0WXHz3mplkFxgZ6-SOIOxTMQdKc3n9Lx2mal8Ri9sEkkkj1NYvlSCkyKrmYnZ4fYLcMaw_Jf9Zts6XaNwQFcWZ7LOL1joOOlqCrLEjJOmguIEN4bZ3hpmik_FC3KPMPwFj7vV-RzQMnrzxLXCczTg42K5Q-VZYY6i1LZrV7WFIP4ql7-rDsPzCdflgXCRTtuxVwM5ACjCmm_8crJWsB2W23iIt1oYqdgnj95Mm4rC">Камера 1 • Арочный купол</button>
+<button class="cam-btn px-3 py-1 rounded-full text-xs font-mono font-medium transition-all text-on-surface-variant hover:text-white" data-cam="2" data-img="https://lh3.googleusercontent.com/aida/AEtjO1V6eXK0EyaVQIT81cAYylTtaNtVAOx6JzPoUcEYNJYsTBuQ5gcWQhWbTimgthpLQSVfdEss5mtX_T37D0rZhJ7zauLfvI1QuL3KaVoQPTK7Crr22tgpHUrQ6MVF5lx3Ww-WjV-d7Zpx9rtRiLStd5p2kQlWuR5h8BcyHWliF0zV6-mVIgg2gfICl8h3Q89jzrfDPuDUyyZ--8c5MujRLZc_ceB8FwtQPXXAtdDpXLif">Камера 2 • Роботизированная линия</button>
+<button class="cam-btn px-3 py-1 rounded-full text-xs font-mono font-medium transition-all text-on-surface-variant hover:text-white" data-cam="3" data-img="https://lh3.googleusercontent.com/aida/AEtjO1XV9-JbsIozkyQ3blIiYW4w916P348wID3l4SBfawHwsucKbIguJANemif7-KzO4pfLuA6IzNaMpFB8PMltJs58435Mvps8BrQ1xvbgw9lrMCXMYUbzA55NUVO_9kBmZdfQVI-vlAKafCM8-Mxygx-m7D1hUNDojslkb5kaLcIvQX0ue9Tg_uq1kKYOulMTH0To_70od0XHEWCQb6-glBo4H1Qdfio08T8Su75kAwY">Камера 3 • Спектральный анализ</button>
+</div>
+<div class="flex items-center gap-2 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-xs font-mono text-emerald-400">
+<span class="material-symbols-outlined text-[14px]">videocam</span>
+<span>REC • 00:04:28:14</span>
+</div>
+</div>
+<!-- Center Play Pulse Button -->
+<div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+<div class="w-20 h-20 rounded-full bg-primary/20 backdrop-blur-md border border-primary/50 flex items-center justify-center shadow-[0_0_30px_rgba(78,222,163,0.4)] group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-primary translate-x-0.5">play_arrow</span>
+</div>
+</div>
+<!-- Bottom Player Control Dock -->
+<div class="absolute bottom-0 inset-x-0 p-4 sm:p-6 z-20 bg-gradient-to-t from-black/90 via-black/60 to-transparent">
+<!-- Progress Timeline Bar -->
+<div class="w-full h-1.5 bg-white/20 rounded-full cursor-pointer mb-3 relative overflow-hidden group/bar">
+<div class="absolute top-0 bottom-0 left-0 bg-primary rounded-full" style="width: 42%;"></div>
+<div class="absolute top-0 bottom-0 left-[42%] w-2 h-2 -translate-y-0.5 -translate-x-1 rounded-full bg-white opacity-0 group-hover/bar:opacity-100 transition-opacity"></div>
+</div>
+<!-- Player Buttons Row -->
+<div class="flex items-center justify-between text-white/90">
+<div class="flex items-center gap-4">
+<button class="hover:text-primary transition-colors flex items-center"><span class="material-symbols-outlined text-2xl">pause</span></button>
+<button class="hover:text-primary transition-colors flex items-center"><span class="material-symbols-outlined text-2xl">volume_up</span></button>
+<span class="text-xs font-mono text-white/70">04:28 / 10:45</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="px-2 py-0.5 rounded bg-white/10 border border-white/15 text-[11px] font-mono text-primary">HDR10</span>
+<button aria-label="Picture in Picture" class="hover:text-primary transition-colors flex items-center"><span class="material-symbols-outlined text-xl">picture_in_picture_alt</span></button>
+<button aria-label="Settings" class="hover:text-primary transition-colors flex items-center"><span class="material-symbols-outlined text-xl">settings</span></button>
+<button aria-label="Fullscreen" class="hover:text-primary transition-colors flex items-center"><span class="material-symbols-outlined text-xl">fullscreen</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. SECTION 2: СЫРЫЕ ЧЕРТЕЖИ И CAD-МОДЕЛИ SKETCHUP -->
+<section class="relative z-10 w-full py-space-xl my-space-md overflow-hidden" id="cad">
+<div class="max-w-7xl mx-auto px-gutter mb-space-md flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<div class="font-label-sm text-label-sm text-cyan-400 uppercase tracking-widest mb-space-xs">Инженерный каркас</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Сырые чертежи и CAD-модели SketchUp</h2>
+</div>
+<div class="flex items-center gap-space-sm">
+<button aria-label="Предыдущий чертеж" class="w-12 h-12 rounded-full bg-surface-container-high/70 backdrop-blur-md border border-cyan-500/20 text-on-surface flex items-center justify-center hover:bg-surface-bright active:scale-95 transition-all" id="cad-prev">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button aria-label="Следующий чертеж" class="w-12 h-12 rounded-full bg-surface-container-high/70 backdrop-blur-md border border-cyan-500/20 text-on-surface flex items-center justify-center hover:bg-surface-bright active:scale-95 transition-all" id="cad-next">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- CAD Carousel Track -->
+<div class="relative w-full">
+<div class="flex gap-space-lg overflow-x-auto snap-x snap-mandatory scroll-smooth px-gutter md:px-[calc((100vw-1280px)/2+1.25rem)] pb-space-lg scrollbar-none cursor-grab active:cursor-grabbing" id="cad-track">
+<!-- CAD Card 1: Trimble SketchUp Viewport -->
+<div class="cad-card snap-center shrink-0 w-[88vw] sm:w-[620px] md:w-[780px] rounded-3xl overflow-hidden bg-surface-container-low border border-cyan-500/25 shadow-2xl relative group">
+<div class="relative aspect-[16/9] w-full overflow-hidden bg-slate-950">
+<img alt="Trimble SketchUp raw viewport capture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvwX7p7BrpvDpIqeTg__cd7xjfchdp0vVWYoRPjepn45R2D_gx1Mc6whtN_LsrGmjqkX_2ZIQNhGoiIjC_mWcELjCzTX9Qt_OX6orDArNLZZJP0rsw6NQPdAH9tURbX0Okmrs3C6zpHBertj2IZS9I60AyOZA1_QEhOexNlrr89PIoFU1Tl1-P4efpfo_WfxsrOQddGN5pZuZTDwQPNZ5Q0UEmM48uUZTmTX2EUho"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-surface-container-lowest/30 to-transparent"></div>
+<!-- Top Badges -->
+<div class="absolute top-space-md left-space-md flex flex-wrap gap-2">
+<span class="px-space-md py-space-xs rounded-full bg-surface-container-lowest/80 backdrop-blur-xl text-cyan-300 font-label-sm text-label-sm border border-cyan-500/30 uppercase tracking-wider">
+SketchUp Pro 2024 • Wireframe
+</span>
+<span class="px-space-md py-space-xs rounded-full bg-surface-container-lowest/80 backdrop-blur-xl text-on-surface-variant font-label-sm text-label-sm border border-white/10 font-mono">
+85,403 Edges • 25,112 Faces
+</span>
+</div>
+<!-- Caption -->
+<div class="absolute bottom-space-lg inset-x-space-lg">
+<h3 class="font-headline-md text-headline-md text-on-surface">Полигональный каркас остекления</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs max-w-xl">
+Вьюпорт Trimble SketchUp: несущие стальные колонны, фермы арочной кровли и автоматические вентиляционные фрамуги.
+</p>
+</div>
+</div>
+</div>
+<!-- CAD Card 2: Isometric Blueprint -->
+<div class="cad-card snap-center shrink-0 w-[88vw] sm:w-[620px] md:w-[780px] rounded-3xl overflow-hidden bg-surface-container-low border border-cyan-500/25 shadow-2xl relative group">
+<div class="relative aspect-[16/9] w-full overflow-hidden bg-slate-950">
+<img alt="Isometric wireframe 3D blueprint CAD model" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGdrOo_qj-cCOb75bdpjWaCSwk_YuBsUavEqJSfYmNbDItSLNllT9LpO8YDGVEnCLgr7VEjW6Y1hZ_WhKh5TV_HDHJEB-nOxuvWHcFe1djpq6Yr1JElwNE6LgiDFwPuZO0w4rH5fLczb6Law1cWS-2D_NhKQruSD2ntBAJkepNzh1ggHfsO1TR-x90JcgjMFIMuz4rFs9Sv_PBcLHeUKdUXake-MvF3xdtR3HVhm4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-surface-container-lowest/30 to-transparent"></div>
+<!-- Top Badges -->
+<div class="absolute top-space-md left-space-md flex flex-wrap gap-2">
+<span class="px-space-md py-space-xs rounded-full bg-surface-container-lowest/80 backdrop-blur-xl text-cyan-300 font-label-sm text-label-sm border border-cyan-500/30 uppercase tracking-wider">
+ISO-001 • Агрокомплекс
+</span>
+<span class="px-space-md py-space-xs rounded-full bg-surface-container-lowest/80 backdrop-blur-xl text-on-surface-variant font-label-sm text-label-sm border border-white/10 font-mono">
+Layers: Glazing, Hydroponics, Climate
+</span>
+</div>
+<!-- Caption -->
+<div class="absolute bottom-space-lg inset-x-space-lg">
+<h3 class="font-headline-md text-headline-md text-on-surface">Изометрическая схема и слои инфраструктуры</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs max-w-xl">
+Полная пространственная компоновка 6 производственных блоков, дренажных прудов и сервисных коридоров AGV.
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- CAD Carousel Dots -->
+<div class="flex items-center justify-center gap-space-xs mt-space-md">
+<button aria-label="Чертеж 1" class="cad-dot w-8 h-1.5 rounded-full bg-cyan-400 transition-all duration-300" data-index="0"></button>
+<button aria-label="Чертеж 2" class="cad-dot w-2 h-1.5 rounded-full bg-surface-variant transition-all duration-300" data-index="1"></button>
+</div>
+</div>
+</section>
+<!-- 5. SECTION 3: ФИНАЛЬНЫЕ 3D-РЕНДЕРЫ БИОКОМПЛЕКСА -->
+<section class="relative z-10 w-full py-space-xl my-space-md overflow-hidden" id="renders">
+<div class="max-w-7xl mx-auto px-gutter mb-space-md flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<div class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-space-xs">Фотореализм и эстетика</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Финальные 3D-рендеры биокомплекса</h2>
+</div>
+<div class="flex items-center gap-space-sm">
+<button aria-label="Предыдущий рендер" class="w-12 h-12 rounded-full bg-surface-container-high/70 backdrop-blur-md border border-emerald-500/20 text-on-surface flex items-center justify-center hover:bg-surface-bright active:scale-95 transition-all" id="render-prev">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button aria-label="Следующий рендер" class="w-12 h-12 rounded-full bg-surface-container-high/70 backdrop-blur-md border border-emerald-500/20 text-on-surface flex items-center justify-center hover:bg-surface-bright active:scale-95 transition-all" id="render-next">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Renders Carousel Track -->
+<div class="relative w-full">
+<div class="flex gap-space-lg overflow-x-auto snap-x snap-mandatory scroll-smooth px-gutter md:px-[calc((100vw-1280px)/2+1.25rem)] pb-space-lg scrollbar-none cursor-grab active:cursor-grabbing" id="render-track">
+<!-- Render Slide 1: Golden Hour -->
+<div class="render-card snap-center shrink-0 w-[85vw] sm:w-[580px] md:w-[740px] rounded-3xl overflow-hidden bg-surface-container-low border border-emerald-500/20 shadow-2xl relative group">
+<div class="relative aspect-[16/10] w-full overflow-hidden">
+<img alt="Светодиодный спектральный каркас оранжереи" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1X0WXHz3mplkFxgZ6-SOIOxTMQdKc3n9Lx2mal8Ri9sEkkkj1NYvlSCkyKrmYnZ4fYLcMaw_Jf9Zts6XaNwQFcWZ7LOL1joOOlqCrLEjJOmguIEN4bZ3hpmik_FC3KPMPwFj7vV-RzQMnrzxLXCczTg42K5Q-VZYY6i1LZrV7WFIP4ql7-rDsPzCdflgXCRTtuxVwM5ACjCmm_8crJWsB2W23iIt1oYqdgnj95Mm4rC"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-surface-container-lowest/20 to-transparent"></div>
+<div class="absolute top-space-md left-space-md">
+<span class="px-space-md py-space-xs rounded-full bg-surface-container-lowest/70 backdrop-blur-xl border border-white/10 text-primary font-label-sm text-label-sm uppercase tracking-wider font-mono">
+                Рендер 01 • Спектр 660nm + Far-Red
+              </span>
+</div>
+<div class="absolute bottom-space-lg inset-x-space-lg">
+<h3 class="font-headline-md text-headline-md text-on-surface">Инсоляция и спектральный добор</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs max-w-xl">
+Арочная оранжерея с динамическим фитоосвещением и контролем фотопериода во время сумерек.
+</p>
+</div>
+</div>
+</div>
+<!-- Render Slide 2: Corridor & Fine Misting -->
+<div class="render-card snap-center shrink-0 w-[85vw] sm:w-[580px] md:w-[740px] rounded-3xl overflow-hidden bg-surface-container-low border border-emerald-500/20 shadow-2xl relative group">
+<div class="relative aspect-[16/10] w-full overflow-hidden">
+<img alt="Роботизированная инспекция и туманообразование" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1V6eXK0EyaVQIT81cAYylTtaNtVAOx6JzPoUcEYNJYsTBuQ5gcWQhWbTimgthpLQSVfdEss5mtX_T37D0rZhJ7zauLfvI1QuL3KaVoQPTK7Crr22tgpHUrQ6MVF5lx3Ww-WjV-d7Zpx9rtRiLStd5p2kQlWuR5h8BcyHWliF0zV6-mVIgg2gfICl8h3Q89jzrfDPuDUyyZ--8c5MujRLZc_ceB8FwtQPXXAtdDpXLif"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-surface-container-lowest/20 to-transparent"></div>
+<div class="absolute top-space-md left-space-md">
+<span class="px-space-md py-space-xs rounded-full bg-surface-container-lowest/70 backdrop-blur-xl border border-white/10 text-primary font-label-sm text-label-sm uppercase tracking-wider font-mono">
+                Рендер 02 • Ультразвуковой туман RH 85%
+              </span>
+</div>
+<div class="absolute bottom-space-lg inset-x-space-lg">
+<h3 class="font-headline-md text-headline-md text-on-surface">Автономный мониторинг и аэрозоли</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs max-w-xl">
+Патрульные AGV-роботы с лазерными лидарами и форсунки субмикронного распыления питательных сред.
+</p>
+</div>
+</div>
+</div>
+<!-- Render Slide 3: Macro Foliage -->
+<div class="render-card snap-center shrink-0 w-[85vw] sm:w-[580px] md:w-[740px] rounded-3xl overflow-hidden bg-surface-container-low border border-emerald-500/20 shadow-2xl relative group">
+<div class="relative aspect-[16/10] w-full overflow-hidden">
+<img alt="Макро-мониторинг тургора и микрокапель" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1XV9-JbsIozkyQ3blIiYW4w916P348wID3l4SBfawHwsucKbIguJANemif7-KzO4pfLuA6IzNaMpFB8PMltJs58435Mvps8BrQ1xvbgw9lrMCXMYUbzA55NUVO_9kBmZdfQVI-vlAKafCM8-Mxygx-m7D1hUNDojslkb5kaLcIvQX0ue9Tg_uq1kKYOulMTH0To_70od0XHEWCQb6-glBo4H1Qdfio08T8Su75kAwY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-surface-container-lowest/20 to-transparent"></div>
+<div class="absolute top-space-md left-space-md">
+<span class="px-space-md py-space-xs rounded-full bg-surface-container-lowest/70 backdrop-blur-xl border border-white/10 text-primary font-label-sm text-label-sm uppercase tracking-wider font-mono">
+                Рендер 03 • Баланс VPD 1.14 кПа
+              </span>
+</div>
+<div class="absolute bottom-space-lg inset-x-space-lg">
+<h3 class="font-headline-md text-headline-md text-on-surface">Микрокапельный баланс транспирации</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs max-w-xl">
+Оптическая оценка тургора листа и деликатное капельное орошение без риска краевого ожога.
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Renders Progress Dots -->
+<div class="flex items-center justify-center gap-space-xs mt-space-md">
+<button aria-label="Слайд 1" class="render-dot w-8 h-1.5 rounded-full bg-primary transition-all duration-300" data-index="0"></button>
+<button aria-label="Слайд 2" class="render-dot w-2 h-1.5 rounded-full bg-surface-variant transition-all duration-300" data-index="1"></button>
+<button aria-label="Слайд 3" class="render-dot w-2 h-1.5 rounded-full bg-surface-variant transition-all duration-300" data-index="2"></button>
+</div>
+</div>
+</section>
+<!-- 6. SECTION 4: ИНТЕРАКТИВНАЯ 3D-МОДЕЛЬ ПРОЕКТА -->
+<section class="relative z-10 max-w-7xl mx-auto px-gutter py-space-xl w-full" id="model-3d">
+<div class="text-center max-w-2xl mx-auto mb-space-lg">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">WebGL 3D Engine</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-space-xs">Интерактивная 3D-модель проекта</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+Вращайте, приближайте и исследуйте геометрию стеклянного купола и аэропонных стеллажей в реальном времени.
+</p>
+</div>
+<!-- 3D Interactive Container -->
+<div class="relative w-full rounded-3xl overflow-hidden border border-emerald-500/25 shadow-[0_20px_60px_rgba(0,0,0,0.6)] bg-slate-950/80 backdrop-blur-2xl">
+<!-- Three.js Component Container -->
+<!-- STITCH_THREEJS_START:ANIMATION_15 class="w-full h-[580px] rounded-2xl border border-emerald-500/20 bg-slate-950/70 backdrop-blur-xl relative overflow-hidden block" -->
+<div class="w-full h-[580px] rounded-2xl border border-emerald-500/20 bg-slate-950/70 backdrop-blur-xl relative overflow-hidden block" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_15" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_15');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  // Interactive 3D Greenhouse Model Viewer with Orbit Controls in vanilla Three.js
+const containerElement = container || document.body;
+const width = containerElement.clientWidth || 800;
+const height = containerElement.clientHeight || 500;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+camera.position.set(22, 16, 26);
+camera.lookAt(0, 4, 0);
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setSize(width, height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+containerElement.appendChild(renderer.domElement);
+
+// Lighting setup
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
+scene.add(ambientLight);
+
+const dirLight = new THREE.DirectionalLight(0x10b981, 1.2);
+dirLight.position.set(15, 25, 10);
+scene.add(dirLight);
+
+const blueLight = new THREE.PointLight(0x06b6d4, 1.5, 50);
+blueLight.position.set(-10, 10, -10);
+scene.add(blueLight);
+
+const greenhouseGroup = new THREE.Group();
+scene.add(greenhouseGroup);
+
+// Materials
+const frameMaterial = new THREE.MeshStandardMaterial({
+  color: 0x1f2937,
+  metalness: 0.8,
+  roughness: 0.2
+});
+
+const glassMaterial = new THREE.MeshPhysicalMaterial({
+  color: 0x34d399,
+  transparent: true,
+  opacity: 0.25,
+  roughness: 0.1,
+  transmission: 0.8,
+  thickness: 0.5,
+  wireframe: false
+});
+
+const glowingPlantMaterial = new THREE.MeshLambertMaterial({
+  color: 0x10b981,
+  emissive: 0x059669,
+  emissiveIntensity: 0.4
+});
+
+const baseBedMaterial = new THREE.MeshStandardMaterial({
+  color: 0x111827,
+  roughness: 0.7
+});
+
+// Ground Grid Base
+const gridHelper = new THREE.GridHelper(30, 30, 0x10b981, 0x1f2937);
+gridHelper.position.y = -0.01;
+greenhouseGroup.add(gridHelper);
+
+// Greenhouse Base Foundation
+const baseGeo = new THREE.BoxGeometry(16.5, 0.8, 22.5);
+const baseMesh = new THREE.Mesh(baseGeo, baseBedMaterial);
+baseMesh.position.y = 0.4;
+greenhouseGroup.add(baseMesh);
+
+// Greenhouse Columns & Arch Framing
+const colGeo = new THREE.BoxGeometry(0.3, 6, 0.3);
+for (let x of [-7.8, 7.8]) {
+  for (let z = -10; z <= 10; z += 5) {
+    const col = new THREE.Mesh(colGeo, frameMaterial);
+    col.position.set(x, 3.8, z);
+    greenhouseGroup.add(col);
+  }
+}
+
+// Glass Walls
+const wallFrontBackGeo = new THREE.BoxGeometry(15.6, 6, 0.1);
+const wallFront = new THREE.Mesh(wallFrontBackGeo, glassMaterial);
+wallFront.position.set(0, 3.8, 10);
+const wallBack = new THREE.Mesh(wallFrontBackGeo, glassMaterial);
+wallBack.position.set(0, 3.8, -10);
+greenhouseGroup.add(wallFront);
+greenhouseGroup.add(wallBack);
+
+const wallSidesGeo = new THREE.BoxGeometry(0.1, 6, 20);
+const wallLeft = new THREE.Mesh(wallSidesGeo, glassMaterial);
+wallLeft.position.set(-7.8, 3.8, 0);
+const wallRight = new THREE.Mesh(wallSidesGeo, glassMaterial);
+wallRight.position.set(7.8, 3.8, 0);
+greenhouseGroup.add(wallLeft);
+greenhouseGroup.add(wallRight);
+
+// Gable / Arched Roof
+for (let z = -10; z <= 10; z += 5) {
+  // Left roof beam
+  const beamGeo = new THREE.BoxGeometry(9, 0.2, 0.25);
+  const beamLeft = new THREE.Mesh(beamGeo, frameMaterial);
+  beamLeft.position.set(-3.9, 8.4, z);
+  beamLeft.rotation.z = Math.PI / 8;
+  greenhouseGroup.add(beamLeft);
+
+  // Right roof beam
+  const beamRight = new THREE.Mesh(beamGeo, frameMaterial);
+  beamRight.position.set(3.9, 8.4, z);
+  beamRight.rotation.z = -Math.PI / 8;
+  greenhouseGroup.add(beamRight);
+}
+
+// Glass Roof Panels
+const roofPanelGeo = new THREE.BoxGeometry(9.2, 0.05, 20);
+const roofLeft = new THREE.Mesh(roofPanelGeo, glassMaterial);
+roofLeft.position.set(-3.9, 8.4, 0);
+roofLeft.rotation.z = Math.PI / 8;
+greenhouseGroup.add(roofLeft);
+
+const roofRight = new THREE.Mesh(roofPanelGeo, glassMaterial);
+roofRight.position.set(3.9, 8.4, 0);
+roofRight.rotation.z = -Math.PI / 8;
+greenhouseGroup.add(roofRight);
+
+// Central Roof Ridge
+const ridgeGeo = new THREE.BoxGeometry(0.35, 0.35, 20.4);
+const ridge = new THREE.Mesh(ridgeGeo, frameMaterial);
+ridge.position.set(0, 10.1, 0);
+greenhouseGroup.add(ridge);
+
+// Hydroponic Vertical Racks & Plant Pods
+for (let z of [-7, -3.5, 0, 3.5, 7]) {
+  for (let x of [-4.5, 4.5]) {
+    // Hydroponic Tier 1 & 2
+    const rackGeo = new THREE.BoxGeometry(2.5, 0.4, 2.2);
+    const rack1 = new THREE.Mesh(rackGeo, baseBedMaterial);
+    rack1.position.set(x, 1.5, z);
+    greenhouseGroup.add(rack1);
+
+    const rack2 = new THREE.Mesh(rackGeo, baseBedMaterial);
+    rack2.position.set(x, 3.5, z);
+    greenhouseGroup.add(rack2);
+
+    // Crops
+    for (let dx of [-0.6, 0.6]) {
+      for (let dz of [-0.5, 0.5]) {
+        const cropGeo = new THREE.SphereGeometry(0.35, 7, 7);
+        const crop1 = new THREE.Mesh(cropGeo, glowingPlantMaterial);
+        crop1.position.set(x + dx, 2.0, z + dz);
+        greenhouseGroup.add(crop1);
+
+        const crop2 = new THREE.Mesh(cropGeo, glowingPlantMaterial);
+        crop2.position.set(x + dx, 4.0, z + dz);
+        greenhouseGroup.add(crop2);
+      }
+    }
+  }
+}
+
+// LED Grow Light fixtures along ceiling
+for (let z = -8; z <= 8; z += 4) {
+  const ledGeo = new THREE.BoxGeometry(10, 0.15, 0.3);
+  const ledMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8 });
+  const ledMesh = new THREE.Mesh(ledGeo, ledMat);
+  ledMesh.position.set(0, 7.2, z);
+  greenhouseGroup.add(ledMesh);
+}
+
+// Interactive Mouse Orbit Rotation
+let isDragging = false;
+let previousMousePosition = { x: 0, y: 0 };
+let autoRotate = true;
+
+const dom = renderer.domElement;
+dom.style.cursor = 'grab';
+
+dom.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  autoRotate = false;
+  previousMousePosition = { x: e.clientX, y: e.clientY };
+  dom.style.cursor = 'grabbing';
+});
+
+window.addEventListener('mouseup', () => {
+  isDragging = false;
+  dom.style.cursor = 'grab';
+});
+
+window.addEventListener('mousemove', (e) => {
+  if (!isDragging) return;
+  const deltaX = e.clientX - previousMousePosition.x;
+  const deltaY = e.clientY - previousMousePosition.y;
+
+  greenhouseGroup.rotation.y += deltaX * 0.008;
+  greenhouseGroup.rotation.x = Math.max(-0.4, Math.min(0.8, greenhouseGroup.rotation.x + deltaY * 0.005));
+
+  previousMousePosition = { x: e.clientX, y: e.clientY };
+});
+
+// Touch support for mobile/tablets
+dom.addEventListener('touchstart', (e) => {
+  if (e.touches.length === 1) {
+    isDragging = true;
+    autoRotate = false;
+    previousMousePosition = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+  }
+});
+
+window.addEventListener('touchend', () => {
+  isDragging = false;
+});
+
+window.addEventListener('touchmove', (e) => {
+  if (!isDragging || e.touches.length !== 1) return;
+  const deltaX = e.touches[0].clientX - previousMousePosition.x;
+  const deltaY = e.touches[0].clientY - previousMousePosition.y;
+
+  greenhouseGroup.rotation.y += deltaX * 0.008;
+  greenhouseGroup.rotation.x = Math.max(-0.4, Math.min(0.8, greenhouseGroup.rotation.x + deltaY * 0.005));
+
+  previousMousePosition = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+});
+
+// Resize listener
+window.addEventListener('resize', () => {
+  const newWidth = containerElement.clientWidth || window.innerWidth;
+  const newHeight = containerElement.clientHeight || window.innerHeight;
+  camera.aspect = newWidth / newHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(newWidth, newHeight);
+});
+
+// Render Loop
+function animate() {
+  requestAnimationFrame(animate);
+  if (autoRotate) {
+    greenhouseGroup.rotation.y += 0.0035;
+  }
+  renderer.render(scene, camera);
+}
+animate();
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_15 -->
+<!-- Top Overlay: Subsystems Status -->
+<div class="absolute top-4 inset-x-4 flex flex-wrap items-center justify-between gap-3 pointer-events-none z-20">
+<div class="flex flex-wrap items-center gap-2 pointer-events-auto">
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-xl border border-emerald-500/30 text-xs text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>Фрамуги: 18° Открыты</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-xl border border-cyan-500/30 text-xs text-on-surface">
+<span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+<span>LED PPFD: 850 µmol</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-xl border border-emerald-500/30 text-xs text-on-surface">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span>Гидропоника: Активна</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pointer-events-auto">
+<button class="px-3 py-1.5 rounded-full bg-surface-container-high/80 backdrop-blur-md border border-white/10 hover:border-primary/50 text-xs text-on-surface font-mono flex items-center gap-1.5 transition-all" id="reset-cam-btn">
+<span class="material-symbols-outlined text-[15px]">refresh</span>
+<span>Сброс ракурса</span>
+</button>
+</div>
+</div>
+<!-- Bottom Overlay: Navigation Hint Banner -->
+<div class="absolute bottom-4 inset-x-4 flex flex-col sm:flex-row items-center justify-between gap-2 pointer-events-none z-20">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest/85 backdrop-blur-xl border border-white/10 text-xs text-on-surface-variant pointer-events-auto">
+<span class="material-symbols-outlined text-primary text-[18px]">360</span>
+<span>Кликните и тяните курсором, чтобы вращать теплицу со всех сторон (360° Orbit)</span>
+</div>
+<div class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-lowest/70 backdrop-blur-md border border-white/5 text-[11px] font-mono text-on-surface-variant">
+Render: WebGL 2.0 • Three.js
+</div>
+</div>
+</div>
+</section>
+<!-- 7. SECTION 5: CONTACT & ACCESS STRIP -->
+<section class="max-w-5xl mx-auto px-gutter py-space-xl w-full mb-space-xl" id="contact">
+<div class="rounded-3xl bg-gradient-to-br from-surface-container-high/80 via-surface-container-low/85 to-surface-container-lowest/95 backdrop-blur-2xl border border-emerald-500/20 p-space-lg md:p-space-xl shadow-2xl flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="max-w-xl text-center md:text-left">
+<div class="inline-flex items-center gap-2 mb-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-mono">FloraSense Cloud API</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Подключить закрытый контур к платформе</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+Развертывание телеметрического шлюза, экспорт CAD-проекта и тест автопилота для коммерческих теплиц.
+</p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-sm w-full md:w-auto">
+<button class="w-full sm:w-auto px-space-lg py-space-sm rounded-full bg-primary text-on-primary font-title-md text-title-md hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_25px_rgba(78,222,163,0.35)] transition-all whitespace-nowrap" id="demo-btn">
+Запросить доступ
+</button>
+<div class="hidden font-label-md text-label-md text-primary bg-primary/10 border border-primary/30 px-space-md py-space-xs rounded-full" id="demo-toast">
+Запрос отправлен инженерам
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- CAROUSELS & INTERACTIVITY SCRIPT -->
+<script>
+  (function () {
+    // Generic carousel binder
+    function setupCarousel(trackId, prevBtnId, nextBtnId, dotsClass, activeBgClass) {
+      const track = document.getElementById(trackId);
+      const prevBtn = document.getElementById(prevBtnId);
+      const nextBtn = document.getElementById(nextBtnId);
+      const dots = document.querySelectorAll(dotsClass);
+      if (!track) return;
+
+      const getCardWidth = () => {
+        const firstCard = track.children[0];
+        return firstCard ? firstCard.offsetWidth + 24 : 600;
+      };
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          track.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          track.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+        });
+      }
+
+      const updateDots = () => {
+        const scrollPos = track.scrollLeft;
+        const cardW = getCardWidth();
+        const activeIdx = Math.min(
+          dots.length - 1,
+          Math.max(0, Math.round(scrollPos / cardW))
+        );
+
+        dots.forEach((dot, idx) => {
+          if (idx === activeIdx) {
+            dot.classList.remove('w-2', 'bg-surface-variant');
+            dot.classList.add('w-8', activeBgClass);
+          } else {
+            dot.classList.remove('w-8', activeBgClass);
+            dot.classList.add('w-2', 'bg-surface-variant');
+          }
+        });
+      };
+
+      track.addEventListener('scroll', updateDots, { passive: true });
+
+      dots.forEach((dot) => {
+        dot.addEventListener('click', (e) => {
+          const idx = parseInt(e.currentTarget.getAttribute('data-index') || '0', 10);
+          track.scrollTo({ left: idx * getCardWidth(), behavior: 'smooth' });
+        });
+      });
+    }
+
+    // CAD Carousel
+    setupCarousel('cad-track', 'cad-prev', 'cad-next', '.cad-dot', 'bg-cyan-400');
+
+    // Renders Carousel
+    setupCarousel('render-track', 'render-prev', 'render-next', '.render-dot', 'bg-primary');
+
+    // Video Camera Switcher
+    const camButtons = document.querySelectorAll('.cam-btn');
+    const previewImg = document.getElementById('video-preview-img');
+    camButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        camButtons.forEach((b) => {
+          b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+          b.classList.add('text-on-surface-variant');
+        });
+        btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+        btn.classList.remove('text-on-surface-variant');
+        const newImg = btn.getAttribute('data-img');
+        if (previewImg && newImg) {
+          previewImg.style.opacity = '0.3';
+          setTimeout(() => {
+            previewImg.src = newImg;
+            previewImg.style.opacity = '1';
+          }, 150);
+        }
+      });
+    });
+
+    // Reset Camera trigger simulation for 3D Viewer
+    const resetBtn = document.getElementById('reset-cam-btn');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        window.dispatchEvent(new Event('resize'));
+        resetBtn.classList.add('text-primary');
+        setTimeout(() => resetBtn.classList.remove('text-primary'), 1000);
+      });
+    }
+
+    // CTA demo button
+    const demoBtn = document.getElementById('demo-btn');
+    const demoToast = document.getElementById('demo-toast');
+    if (demoBtn && demoToast) {
+      demoBtn.addEventListener('click', () => {
+        demoBtn.classList.add('hidden');
+        demoToast.classList.remove('hidden');
+        setTimeout(() => {
+          demoToast.classList.add('hidden');
+          demoBtn.classList.remove('hidden');
+        }, 4000);
+      });
+    }
+  })();
+</script>
+</main>
+<!-- 8. SLEEK MINIMALIST GLASS FOOTER -->
+<footer class="w-full bg-surface-container-lowest border-t border-white/5 py-space-xl"><div class="max-w-7xl mx-auto px-gutter"><div class="flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><span class="w-2.5 h-2.5 rounded-full bg-primary/80 shadow-[0_0_8px_#4edea3]"></span><span class="font-headline-sm text-headline-sm text-on-surface">FloraSense</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider ml-space-xs font-mono">AgTech Microclimate Systems</span></div><div class="flex flex-wrap items-center justify-center gap-space-lg font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" href="#video">Видеообзор</a><a class="hover:text-primary transition-colors" href="#cad">SketchUp CAD</a><a class="hover:text-primary transition-colors" href="#renders">3D Рендеры</a><a class="hover:text-primary transition-colors" href="#model-3d">3D Модель</a><a class="hover:text-primary transition-colors" href="#contact">Связаться</a></div><div class="font-label-sm text-label-sm text-on-surface-variant">© 2025 FloraSense Bio-Systems. Все права защищены.</div></div></div></footer></body></html>
