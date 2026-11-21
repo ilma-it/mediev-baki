@@ -413,60 +413,60 @@ html:not(.dark) #mobile-drawer-close {
 }
 
 /* ==========================================================================
-   3. "РАЗМЫТЫЙ ВЕТРЕННЫЙ" SCROLL REVEAL ANIMATIONS (Windy Mist Blur Effect)
+   3. "РАЗМЫТАЯ, ПЛАВНАЯ И ВЫСОКАЯ" SCROLL REVEAL ANIMATIONS
    ========================================================================== */
 html.js-ready .reveal-on-scroll {
   opacity: 0;
-  transform: translate3d(-26px, 28px, 0) skewX(-1.8deg);
-  filter: blur(14px);
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
-              filter 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translate3d(0, 75px, 0);
+  filter: blur(22px);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.25s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 1.25s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform, filter;
   backface-visibility: hidden;
 }
 
 html.js-ready .reveal-scale {
   opacity: 0;
-  transform: translate3d(-20px, 24px, 0) scale(0.93) skewX(-1.4deg);
-  filter: blur(16px);
-  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-              filter 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translate3d(0, 85px, 0) scale(0.92);
+  filter: blur(26px);
+  transition: opacity 1.25s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.35s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 1.35s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform, filter;
   backface-visibility: hidden;
 }
 
 html.js-ready .reveal-fade {
   opacity: 0;
-  transform: translate3d(-14px, 16px, 0);
-  filter: blur(12px);
-  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-              filter 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translate3d(0, 55px, 0);
+  filter: blur(18px);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.25s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 1.25s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform, filter;
   backface-visibility: hidden;
 }
 
-/* Active Revealed State (Crystal clear, wind settled) */
+/* Active Revealed State (Crystal clear, fully settled) */
 html.js-ready .reveal-on-scroll.is-revealed,
 html.js-ready .reveal-scale.is-revealed,
 html.js-ready .reveal-fade.is-revealed {
   opacity: 1 !important;
-  transform: translate3d(0, 0, 0) scale(1) skewX(0deg) !important;
+  transform: translate3d(0, 0, 0) scale(1) !important;
   filter: blur(0px) !important;
 }
 
 /* Delay Stagger Helpers */
-.delay-75  { transition-delay: 75ms !important; }
-.delay-100 { transition-delay: 100ms !important; }
-.delay-150 { transition-delay: 150ms !important; }
-.delay-200 { transition-delay: 200ms !important; }
-.delay-250 { transition-delay: 250ms !important; }
-.delay-300 { transition-delay: 300ms !important; }
-.delay-350 { transition-delay: 350ms !important; }
-.delay-400 { transition-delay: 400ms !important; }
-.delay-500 { transition-delay: 500ms !important; }
+.delay-75  { transition-delay: 90ms !important; }
+.delay-100 { transition-delay: 120ms !important; }
+.delay-150 { transition-delay: 180ms !important; }
+.delay-200 { transition-delay: 240ms !important; }
+.delay-250 { transition-delay: 300ms !important; }
+.delay-300 { transition-delay: 360ms !important; }
+.delay-350 { transition-delay: 420ms !important; }
+.delay-400 { transition-delay: 480ms !important; }
+.delay-500 { transition-delay: 600ms !important; }
 
 /* Accessibility fallback */
 @media (prefers-reduced-motion: reduce) {
