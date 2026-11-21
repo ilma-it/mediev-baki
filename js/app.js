@@ -5,6 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
+  initScrollAnimations();
   init3DModelViewer();
   initVideoPlayer();
   initCarousels();
@@ -15,6 +16,42 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initSmoothScroll();
 });
+
+/* ==========================================================================
+   SCROLL REVEAL ANIMATIONS (IntersectionObserver)
+   ========================================================================== */
+function initScrollAnimations() {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+
+  document.documentElement.classList.add('js-ready');
+
+  const revealElements = document.querySelectorAll('.reveal-on-scroll, .reveal-scale, .reveal-fade');
+  if (!revealElements.length) return;
+
+  if (!('IntersectionObserver' in window)) {
+    revealElements.forEach(el => el.classList.add('is-revealed'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: '0px 0px -40px 0px',
+    threshold: 0.05
+  });
+
+  revealElements.forEach(el => {
+    observer.observe(el);
+  });
+}
 
 /* ==========================================================================
    0. THEME TOGGLE (LIGHT & DARK THEMES)

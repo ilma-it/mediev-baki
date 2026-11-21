@@ -411,3 +411,58 @@ html:not(.dark) #mobile-drawer-close {
 #lightbox-modal .bg-white\/20 {
   background-color: rgba(255, 255, 255, 0.2) !important;
 }
+
+/* ==========================================================================
+   3. SCROLL REVEAL ANIMATIONS (IntersectionObserver)
+   ========================================================================== */
+html.js-ready .reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+html.js-ready .reveal-scale {
+  opacity: 0;
+  transform: scale(0.95) translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+html.js-ready .reveal-fade {
+  opacity: 0;
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity;
+}
+
+/* Active Revealed State */
+html.js-ready .reveal-on-scroll.is-revealed,
+html.js-ready .reveal-scale.is-revealed,
+html.js-ready .reveal-fade.is-revealed {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+/* Delay Stagger Helpers */
+.delay-75  { transition-delay: 75ms !important; }
+.delay-100 { transition-delay: 100ms !important; }
+.delay-150 { transition-delay: 150ms !important; }
+.delay-200 { transition-delay: 200ms !important; }
+.delay-250 { transition-delay: 250ms !important; }
+.delay-300 { transition-delay: 300ms !important; }
+.delay-350 { transition-delay: 350ms !important; }
+.delay-400 { transition-delay: 400ms !important; }
+.delay-500 { transition-delay: 500ms !important; }
+
+/* Accessibility fallback */
+@media (prefers-reduced-motion: reduce) {
+  html.js-ready .reveal-on-scroll,
+  html.js-ready .reveal-scale,
+  html.js-ready .reveal-fade {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
