@@ -4,6 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initThemeToggle();
   init3DModelViewer();
   initVideoPlayer();
   initCarousels();
@@ -14,6 +15,76 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initSmoothScroll();
 });
+
+/* ==========================================================================
+   0. THEME TOGGLE (LIGHT & DARK THEMES)
+   ========================================================================== */
+function initThemeToggle() {
+  const themeToggleBtn = document.getElementById('theme-toggle-btn');
+  const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle-btn');
+
+  function getActiveTheme() {
+    return document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+  }
+
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+      document.documentElement.classList.remove('light');
+    } else {
+      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('light');
+    }
+    try {
+      localStorage.setItem('theme', theme);
+    } catch (e) {
+      console.warn('LocalStorage error:', e);
+    }
+    updateThemeAria(theme);
+  }
+
+  function updateThemeAria(theme) {
+    const isDark = theme === 'dark';
+    const label = isDark ? 'Включить светлую тему' : 'Включить темную тему';
+    if (themeToggleBtn) {
+      themeToggleBtn.setAttribute('aria-label', label);
+      themeToggleBtn.setAttribute('title', label);
+    }
+    if (mobileThemeToggleBtn) {
+      mobileThemeToggleBtn.setAttribute('aria-label', label);
+      const textSpan = mobileThemeToggleBtn.querySelector('.theme-mode-text');
+      if (textSpan) {
+        textSpan.textContent = isDark ? 'Темная' : 'Светлая';
+      }
+    }
+  }
+
+  function toggleTheme() {
+    const currentTheme = getActiveTheme();
+    const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    applyTheme(nextTheme);
+  }
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', toggleTheme);
+  }
+  if (mobileThemeToggleBtn) {
+    mobileThemeToggleBtn.addEventListener('click', toggleTheme);
+  }
+
+  // Set initial aria labels based on current theme
+  updateThemeAria(getActiveTheme());
+
+  // Listen for OS scheme changes if user hasn't set an explicit preference
+  try {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    mediaQuery.addEventListener('change', (e) => {
+      if (!localStorage.getItem('theme')) {
+        applyTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+  } catch (e) {}
+}
 
 /* ==========================================================================
    1. THREE.JS 3D MODEL VIEWER (GLTFLoader + OrbitControls + File Picker)
