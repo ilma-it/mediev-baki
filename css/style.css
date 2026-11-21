@@ -413,36 +413,48 @@ html:not(.dark) #mobile-drawer-close {
 }
 
 /* ==========================================================================
-   3. SCROLL REVEAL ANIMATIONS (IntersectionObserver)
+   3. "РАЗМЫТЫЙ ВЕТРЕННЫЙ" SCROLL REVEAL ANIMATIONS (Windy Mist Blur Effect)
    ========================================================================== */
 html.js-ready .reveal-on-scroll {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+  transform: translate3d(-26px, 28px, 0) skewX(-1.8deg);
+  filter: blur(14px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
+  backface-visibility: hidden;
 }
 
 html.js-ready .reveal-scale {
   opacity: 0;
-  transform: scale(0.95) translateY(20px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+  transform: translate3d(-20px, 24px, 0) scale(0.93) skewX(-1.4deg);
+  filter: blur(16px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
+  backface-visibility: hidden;
 }
 
 html.js-ready .reveal-fade {
   opacity: 0;
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity;
+  transform: translate3d(-14px, 16px, 0);
+  filter: blur(12px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
+  backface-visibility: hidden;
 }
 
-/* Active Revealed State */
+/* Active Revealed State (Crystal clear, wind settled) */
 html.js-ready .reveal-on-scroll.is-revealed,
 html.js-ready .reveal-scale.is-revealed,
 html.js-ready .reveal-fade.is-revealed {
   opacity: 1 !important;
-  transform: translateY(0) scale(1) !important;
+  transform: translate3d(0, 0, 0) scale(1) skewX(0deg) !important;
+  filter: blur(0px) !important;
 }
 
 /* Delay Stagger Helpers */
@@ -463,6 +475,7 @@ html.js-ready .reveal-fade.is-revealed {
   html.js-ready .reveal-fade {
     opacity: 1 !important;
     transform: none !important;
+    filter: none !important;
     transition: none !important;
   }
 }
